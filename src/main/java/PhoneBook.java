@@ -16,4 +16,16 @@ public class PhoneBook {
     public String findByNumber(String number) {
         return numberToName.get(number);
     }
+
+    public String findByName(String name) {
+        return nameToNumber.get(name);
+    }
+
+    public String printAllNames() {
+        StringBuilder sb = new StringBuilder();
+        for (String name : nameToNumber.keySet()) {
+            sb.append(name).append("\n");
+        }
+        return sb.toString().trim();
+    }
 }
